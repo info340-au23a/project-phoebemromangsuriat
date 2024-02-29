@@ -10,7 +10,7 @@ function AvailableListings() {
           <li><a href="profile.html">Profile</a></li>
           <li><a href="shop.html">Shop</a></li>
           <li><a href="sell.html">Sell</a></li>
-          <li><a href="">Friends</a></li>
+          <li><a href="sell.html">Friends</a></li>
         </ul>
       </div>
 

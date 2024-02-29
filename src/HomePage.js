@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/style.css'; 
+import './css/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function HomePage() {
@@ -11,7 +11,7 @@ function HomePage() {
           <li><a href="profile.html">Profile</a></li>
           <li><a href="shop.html">Shop</a></li>
           <li><a href="sell.html">Sell</a></li>
-          <li><a href="#">Friends</a></li>
+          <li><a href="friends.html">Friends</a></li>
         </ul>
       </div>
 

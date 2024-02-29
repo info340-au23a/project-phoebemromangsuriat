@@ -5,6 +5,7 @@ import MarketPlace from './MarketPlace';
 import Sell from './Sell';
 import Profile from './Profile';
 import Listing from './Listing';
+import Friends from './friends';
 
 function App(props) {
   return (
@@ -15,6 +16,7 @@ function App(props) {
         <Route path="/sell" element={<Sell />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/listing" element={<Listing />} />
+        <Route path="/friends" element={<Friends />} />
       </Routes>
     </div>
   );

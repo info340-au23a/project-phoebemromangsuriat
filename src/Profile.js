@@ -1,7 +1,28 @@
-import React from 'react';
-import './css/style.css'; 
+import React, { useState } from 'react';
+import './css/style.css';
 
-function EditProfile() {
+function EditProfile({ onSaveProfile }) {
+  const [profileData, setProfileData] = useState({
+    name: '',
+    image: '',
+    major: '',
+    grade: '',
+    bio: ''
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setProfileData(prevData => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSaveProfile(profileData);
+  };
+
   return (
     <div>
       <div className="menu-bar">
@@ -10,28 +31,28 @@ function EditProfile() {
           <li><a href="profile.html">Profile</a></li>
           <li><a href="shop.html">Shop</a></li>
           <li><a href="sell.html">Sell</a></li>
-          <li><a href="">Friends</a></li>
+          <li><a href="sell.html">Friends</a></li>
         </ul>
       </div>
 
       <div className="profile-container">
         <section id="Build Profile">
-          <h1>Edit Your Profile!</h1>
+          <h1>Create Your Profile!</h1>
 
-          <div className="profile-form">
+          <form onSubmit={handleSubmit} className="profile-form">
             {/* Will add form link later */}
             <label htmlFor="name">Username:</label>
-            <input type="text" id="name" name="name" required />
+            <input type="text" id="name" name="name" required onChange={handleInputChange} value={profileData.name} />
 
             <label htmlFor="profile-picture">Profile Picture:</label>
-            <input type="file" id="image" name="image" accept="image/*" />
+            <input type="file" id="image" name="image" accept="image/*" onChange={handleInputChange} />
 
             <label htmlFor="major">Major:</label>
-            <input type="text" id="major" name="major" />
+            <input type="text" id="major" name="major" onChange={handleInputChange} value={profileData.major} />
 
             <label htmlFor="grade">Grade</label>
-            <select name="grade" className="grade-picker">
-              <option value=" ">Select your grade</option>
+            <select name="grade" className="grade-picker" onChange={handleInputChange} value={profileData.grade}>
+              <option value="">Select your grade</option>
               <option>Freshman</option>
               <option>Sophomore</option>
               <option>Junior</option>
@@ -39,10 +60,10 @@ function EditProfile() {
             </select>
 
             <label htmlFor="bio">Bio:</label>
-            <textarea id="bio" name="bio" rows="4"></textarea>
+            <textarea id="bio" name="bio" rows="4" onChange={handleInputChange} value={profileData.bio}></textarea>
 
-            <button type="make-changes">Make Changes!</button>
-          </div>
+            <button type="submit">Make Changes!</button>
+          </form>
         </section>
       </div>
 

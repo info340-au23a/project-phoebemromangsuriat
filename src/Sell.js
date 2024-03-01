@@ -6,8 +6,7 @@ function NewListing() {
   return (
     <div>
     <Header /> {}
-      <button type="goback">Back to Your Listings</button>
-      <div className="listing-container">
+\      <div className="listing-container">
         <section id="add-listing">
           <h1>Add School Supply Listing</h1>
           <div className="listing-form">

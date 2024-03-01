@@ -45,7 +45,10 @@ return (
             {filteredListings.map((listing) => (
               <div key={listing.id} className="textbook-item-container">
                 <img src={listing.image} alt={`${listing.name} Image`} />
-                <a href="#">{listing.name}</a>
+                <ul>
+                <li><a href="#"><h4>{listing.name}</h4></a></li>
+                <li><a href="#">${listing.price}</a></li>
+                </ul>
               </div>
             ))}
           </section>

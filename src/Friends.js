@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 // Define the profiles array
 const profiles = [
@@ -25,96 +26,92 @@ const profiles = [
   }
 ];
 
+function FriendItem({ friend }) {
+  return (
+    <div className="friend">
+      <h2>{friend.name}</h2>
+      <p>Major: {friend.major}</p>
+      <p>Grade: {friend.grade}</p>
+      <p>Bio: {friend.bio}</p>
+    </div>
+  );
+}
+
 function Friends() {
-    const [searchCriteria, setSearchCriteria] = useState({
-        major: '',
-        grade: ''
+  const [searchCriteria, setSearchCriteria] = useState({
+    major: '',
+    grade: ''
+  });
+  const [searchResults, setSearchResults] = useState([]);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setSearchCriteria(prevCriteria => ({
+      ...prevCriteria,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Filter profiles based on search criteria
+    const filteredProfiles = profiles.filter(profile => {
+      const majorMatch = !searchCriteria.major || profile.major.toLowerCase().includes(searchCriteria.major.toLowerCase());
+      const gradeMatch = !searchCriteria.grade || profile.grade.toLowerCase() === searchCriteria.grade.toLowerCase();
+      return majorMatch || gradeMatch;
     });
+    setSearchResults(filteredProfiles);
+  };
 
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setSearchCriteria(prevCriteria => ({
-            ...prevCriteria,
-            [name]: value
-        }));
-    };
+  return (
+    <div>
+      <div className="menu-bar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="sell.html">Sell</a></li>
+          <li><a href="friends.html">Friends</a></li>
+        </ul>
+      </div>
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        
-        // Filter profiles based on search criteria
-        const filteredProfiles = profiles.filter(profile => {
-            const majorMatch = !searchCriteria.major || profile.major.toLowerCase().includes(searchCriteria.major.toLowerCase());
-            const gradeMatch = !searchCriteria.grade || profile.grade.toLowerCase() === searchCriteria.grade.toLowerCase();
-            return majorMatch && gradeMatch;
-        });
-    
-        // Display search results
-        displayResults(filteredProfiles);
-    };
+      <div className="friends-container">
+        <section id="Find Friends">
+          <h1>Find Friends</h1>
 
-    const displayResults = (results) => {
-        const resultsContainer = document.getElementById('results');
-        resultsContainer.innerHTML = ''; // Clear previous results
-        
-        if (results.length === 0) {
-            resultsContainer.innerHTML = '<p>No matching friends found.</p>';
-            return;
-        }
+          <form onSubmit={handleSubmit} className="friends-form">
+            <label htmlFor="major">Major:</label>
+            <input type="text" id="major" name="major" onChange={handleInputChange} value={searchCriteria.major} />
 
-        // Loop through results and create HTML elements to display each friend
-        results.forEach(friend => {
-            const friendElement = document.createElement('div');
-            friendElement.classList.add('friend');
-            friendElement.innerHTML = `
-                <h2>${friend.name}</h2>
-                <p>Major: ${friend.major}</p>
-                <p>Grade: ${friend.grade}</p>
-                <p>Bio: ${friend.bio}</p>
-            `;
-            resultsContainer.appendChild(friendElement);
-        });
-    };
+            <label htmlFor="grade">Grade:</label>
+            <select name="grade" id="grade" onChange={handleInputChange} value={searchCriteria.grade}>
+              <option value="">Select grade</option>
+              <option>Freshman</option>
+              <option>Sophomore</option>
+              <option>Junior</option>
+              <option>Senior</option>
+            </select>
 
-    return (
-        <div>
-            <div className="menu-bar">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="profile.html">Profile</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="sell.html">Sell</a></li>
-                    <li><a href="friends.html">Friends</a></li>
-                </ul>
-            </div>
+            <button type="submit">Search</button>
+          </form>
+        </section>
+      </div>
 
-            <div className="friends-container">
-                <section id="Find Friends">
-                    <h1>Find Friends</h1>
+      <div id="results">
+        {searchResults.length === 0 ? (
+          <p>No matching friends found.</p>
+        ) : (
+          searchResults.map(friend => (
+            <FriendItem key={friend.id} friend={friend} />
+          ))
+        )}
+      </div>
 
-                    <form onSubmit={handleSubmit} className="friends-form">
-                        <label htmlFor="major">Major:</label>
-                        <input type="text" id="major" name="major" onChange={handleInputChange} value={searchCriteria.major} />
-
-                        <label htmlFor="grade">Grade:</label>
-                        <select name="grade" id="grade" onChange={handleInputChange} value={searchCriteria.grade}>
-                            <option value="">Select grade</option>
-                            <option>Freshman</option>
-                            <option>Sophomore</option>
-                            <option>Junior</option>
-                            <option>Senior</option>
-                        </select>
-
-                        <button type="submit">Search</button>
-                    </form>
-                </section>
-            </div>
-
-            <footer>
-                <p>&copy; 2024 UW Study Buddy App. All rights reserved.</p>
-            </footer>
-        </div>
-    );
+      <footer>
+        <p>&copy; 2024 UW Study Buddy App. All rights reserved.</p>
+      </footer>
+    </div>
+  );
 }
 
 export default Friends;

@@ -47,48 +47,6 @@
         <p>&copy; 2024 UW Study Buddy App. All rights reserved.</p>
     </footer>
 
-    <script>
-        document.getElementById('searchForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            // Get search criteria
-            const major = document.getElementById('major').value;
-            const grade = document.getElementById('grade').value;
-    
-            // Here you would typically send a request to your backend with the search criteria
-            // and retrieve matching friends from your database.
-            // For this example, let's just log the search criteria.
-            console.log('Search Criteria:');
-            console.log('Major:', major);
-            console.log('Grade:', grade);
-            
-            // You can then update the UI with the search results
-            displayResults([]); // Passing an empty array as a placeholder
-        });
-    
-        function displayResults(results) {
-            const resultsContainer = document.getElementById('results');
-            resultsContainer.innerHTML = ''; // Clear previous results
-            
-            if (results.length === 0) {
-                resultsContainer.innerHTML = '<p>No matching friends found.</p>';
-                return;
-            }
-    
-            // Loop through results and create HTML elements to display each friend
-            results.forEach(friend => {
-                const friendElement = document.createElement('div');
-                friendElement.classList.add('friend');
-                friendElement.innerHTML = `
-                    <h2>${friend.name}</h2>
-                    <p>Major: ${friend.major}</p>
-                    <p>Grade: ${friend.grade}</p>
-                    <p>Bio: ${friend.bio}</p>
-                `;
-                resultsContainer.appendChild(friendElement);
-            });
-        }
-    </script>
     
 </body>
 </html>

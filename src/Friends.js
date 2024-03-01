@@ -94,10 +94,10 @@ function Friends() {
       </div>
 
       {!searchCriteria.major && !searchCriteria.grade && (
-  <div id="allFriends">
-    {profiles.map(friend => (
-      <FriendItem key={friend.id} friend={friend} />
-    ))}
+      <div id="allFriends">
+        {profiles.map(friend => (
+          <FriendItem key={friend.id} friend={friend} />
+      ))}
   </div>
 )}
 

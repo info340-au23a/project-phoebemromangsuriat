@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import Header from './Header'; 
+import ReactDOM from 'react-dom';
+import Header from './Header';
 import Footer from './Footer';
+//import profiles from 'public/profile.json';
 
 // Define the profiles array
 const profiles = [
@@ -99,6 +101,17 @@ function Friends() {
           ))
         )}
       </div>
+
+      <div id="allFriends">
+        {profiles.map(friend => (
+          <div key={friend.id} className="friend">
+            <h2>{friend.name}</h2>
+            <p>Major: {friend.major}</p>
+            <p>Grade: {friend.grade}</p>
+            <p>Bio: {friend.bio}</p>
+      </div>
+  ))}
+</div>
 
       <Footer /> {}
         </div>

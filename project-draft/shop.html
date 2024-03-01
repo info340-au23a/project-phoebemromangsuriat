@@ -57,6 +57,20 @@
     <footer>
         <p>&copy; 2024 UW Study Buddy App. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var currentLocation = window.location.href;
+            var menuItems = document.querySelectorAll('.menu-bar a');
+    
+            menuItems.forEach(function (item) {
+                if (item.href === currentLocation) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+    
 </body>
 
 </html>

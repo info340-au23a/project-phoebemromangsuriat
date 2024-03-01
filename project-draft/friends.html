@@ -25,7 +25,7 @@
 
     <form id="searchForm" action="javascript:void(0)">
         <label for="major">Major:</label>
-        <input type="text" id="major" name="major" placeholder="Enter major">
+        <input type="text" id="major" name="major" placeholder="Enter major" class="custom-major-input">
         
         <label for="grade">Grade:</label>
         <select id="grade" name="grade">
@@ -54,5 +54,22 @@
     </footer>
 
     <script src="Friends.js" defer></script>
+
+    <script>
+        // JavaScript to highlight the active menu item
+        document.addEventListener("DOMContentLoaded", function () {
+            var currentLocation = window.location.href;
+            var menuItems = document.querySelectorAll('.menu-bar a');
+    
+            menuItems.forEach(function (item) {
+                if (item.href === currentLocation) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+
 </body>
+
 </html>

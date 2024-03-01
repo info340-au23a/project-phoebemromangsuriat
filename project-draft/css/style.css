@@ -53,6 +53,13 @@ img {
     color: #fff;
 }
 
+.menu-bar a.active {
+    background-color: #bb95f9;
+    border-radius: 5px;
+}
+
+
+
 @media (min-width: 900px) {
     .menu-bar ul {
         margin: 0;
@@ -95,12 +102,13 @@ body {
     flex: 1; /* Allow main content to grow and fill available space */
   }
   
-  footer {
+footer {
     background-color: #383636;
     color: #fff;
     text-align: center;
     padding: 10px;
-  }
+    margin-top: auto;
+}
 
 .listing-form {
     max-width: 600px;
@@ -141,6 +149,14 @@ button {
     border-radius: 5px;
 }
 
+.back-button {
+    display: inline-block;
+    padding: 10px 20px; 
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}  
+
 button:hover {
     background-color: #e7bf3c9c;
 }
@@ -150,6 +166,10 @@ button:hover {
         width: 100%;
         box-sizing: border-box;
 
+    }
+
+    .custom-major-input {
+        width: 0%; /* Adjust the size as needed for larger screens */
     }
     
     select {
@@ -328,6 +348,11 @@ button[type="goback"] {
     margin: 20px
   }
 
+  #searchForm {
+    margin: 20px;
+  }
+
+
   
 .listings-container {
     display: flex;
@@ -389,3 +414,41 @@ button[type="goback"] {
     text-decoration: none;
     color: #383636;
 }
+
+
+.friends-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Change from center to space-between */
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: auto;
+    max-width: 700px;
+    min-height: auto;
+}
+
+.friends-form {
+    max-width: 600px; /* Adjust the max-width according to your design */
+    margin: 0 auto;
+}
+  
+ 
+.custom-major-input {
+    width: 50%; /* Set the width as needed for the "Major" input */
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+

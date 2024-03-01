@@ -1,10 +1,10 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 import HomePage from './HomePage';
-import MarketPlace from './MarketPlace';
+import AvailableListings from './AvailableListings';
 import Sell from './Sell';
 import Profile from './Profile';
-import Listing from './Listing';
+import ListingDisplay from './ListingDisplay';
 import Friends from './Friends';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/style.css';
@@ -14,11 +14,12 @@ function App(props) {
     <div>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/marketplace" element={<MarketPlace />} />
+        <Route path="/availablelistings" element={<AvailableListings />} />
         <Route path="/sell" element={<Sell />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/listing" element={<Listing />} />
         <Route path="/friends" element={<Friends />} />
+        <Route path="/listings" element={<AvailableListings />} />
+        <Route path="/apartments/:id" element={<ListingDisplay />} />
       </Routes>
     </div>
   );

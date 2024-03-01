@@ -2,32 +2,50 @@ import React from 'react';
 import Header from './Header'; 
 import Footer from './Footer';
 
-function ListingsPage() {
+function NewListing() {
   return (
     <div>
-      <Header /> {}
+    <Header /> {}
+      <button type="goback">Back to Your Listings</button>
+      <div className="listing-container">
+        <section id="add-listing">
+          <h1>Add School Supply Listing</h1>
+          <div className="listing-form">
+            
+            <label htmlFor="supply">Type of Supply</label>
+            <select name="supply" className="supply-picker">
+              <option value=" ">Select a condition</option>
+              <option>Textbook</option>
+              <option>Notes</option>
+              <option>Supplies</option>
+              <option>Miscanelleous</option>
+            </select>
 
-      <div className="container">
-        <div className="existing-listings">
-          <h2>Your Listings</h2>
-          <ul>
-            <li>Sign in to View your Listing</li>
-          </ul>
-        </div>
+            <label htmlFor="condition">Condition</label>
+            <select name="condition" className="condition-picker">
+              <option value=" ">Select a condition</option>
+              <option>Brand New</option>
+              <option>Very Good</option>
+              <option>Good</option>
+              <option>Used</option>
+            </select>
 
-        <div className="new-listings">
-          <h2>Add a New Listing</h2>
-          <ul>
-            <li><a href="booklisting.html">Book Listing</a></li>
-            <li><a href="schoolsupplylisting.html">School Supply Listing</a></li>
-            <li><a href="noteslisting.html">Notes Listing</a></li>
-          </ul>
-        </div>
+            <label htmlFor="image">Upload Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" />
+
+            <label htmlFor="description">Description:</label>
+            <textarea id="description" name="description" rows="4"></textarea>
+
+            <label htmlFor="price">Price:</label>
+            <input type="text" id="price" name="price" />
+
+            <button type="submit">Submit Listing</button>
+          </div>
+        </section>
       </div>
-
-      <Footer /> {}
+      <Footer /> 
     </div>
   );
 }
 
-export default ListingsPage;
+export default NewListing;

@@ -66,7 +66,7 @@ function Friends() {
 
     return (
         <div>
-            <Header /> {}
+        <Header /> {}
 
       <div className="friends-container">
         <section id="Find Friends">

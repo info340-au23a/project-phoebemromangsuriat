@@ -37,12 +37,22 @@ function Friends() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+  
+    //console.log("Search Criteria:", searchCriteria);
+  
     const filteredProfiles = profiles.filter(profile => {
+      //console.log("Profile:", profile);
+  
       const majorMatch = !searchCriteria.major || profile.major.toLowerCase().includes(searchCriteria.major.toLowerCase());
       const gradeMatch = !searchCriteria.grade || profile.grade.toLowerCase() === searchCriteria.grade.toLowerCase();
-      return majorMatch && gradeMatch; 
+  
+      //console.log("Major Match:", majorMatch);
+      //console.log("Grade Match:", gradeMatch);
+  
+      return majorMatch && gradeMatch;
     });
+  
+    //console.log("Filtered Profiles:", filteredProfiles);
   
     setSearchResults(filteredProfiles);
   };

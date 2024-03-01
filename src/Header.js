@@ -1,21 +1,20 @@
 // Header.js
 import React from 'react';
-import './css/style.css'; 
 import {Link} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/style.css';
 
 function Header() {
   return (
-    <header>
-      <nav>
+    <div className="menu-bar"> {}
         <ul>
-        <li><Link to="/">Home</Link></li>
-          <li><Link to="/Profile">Profile</Link></li> 
-          <li><Link to="/Shop">Shop</Link></li>
-          <li><Link to="/Sell">Sell</Link></li>
-          <li><Link to="/Friends">Friends</Link></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/Profile">Profile</a></li>
+            <li><a href="/MarketPlace">Shop</a></li>
+            <li><a href="/Sell">Sell</a></li>
+            <li><a href="/Friends">Friends</a></li>
         </ul>
-      </nav>
-    </header>
+    </div>
   );
 }
 

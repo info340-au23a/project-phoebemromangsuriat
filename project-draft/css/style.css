@@ -40,6 +40,7 @@ img {
 .menu-bar li {
     display: inline;
     margin-right: 20px;
+    word-spacing: 30px;
 }
 .menu-bar li:last-child {
     margin-right: 0;
@@ -86,30 +87,21 @@ h4 {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
     margin: 0;
-}
-
-main {
-    flex: 1;
-    min-height: calc(100vh - (height of header + height of footer));
-    overflow-y: auto;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    margin-top: 20px;
-    text-align: center;
-    width: 100%;
-    height: 2.5em; 
-    font-family: 'Goergia', serif;
+  }
+  
+  main {
+    flex: 1; /* Allow main content to grow and fill available space */
+  }
+  
+  footer {
     background-color: #383636;
     color: #fff;
     text-align: center;
-}
-
+    padding: 10px;
+  }
+  
 .listing-form {
     max-width: 600px;
     margin: 0 auto;

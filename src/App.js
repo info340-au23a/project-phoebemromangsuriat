@@ -5,7 +5,9 @@ import MarketPlace from './MarketPlace';
 import Sell from './Sell';
 import Profile from './Profile';
 import Listing from './Listing';
-import Friends from './friends';
+import Friends from './Friends';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/style.css';
 
 function App(props) {
   return (

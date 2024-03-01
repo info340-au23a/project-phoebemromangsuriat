@@ -66,15 +66,7 @@ function Friends() {
 
     return (
         <div>
-            <div className="menu-bar">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="profile.html">Profile</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="sell.html">Sell</a></li>
-                    <li><a href="friends.html">Friends</a></li>
-                </ul>
-            </div>
+            <Header /> {}
 
       <div className="friends-container">
         <section id="Find Friends">
@@ -108,9 +100,7 @@ function Friends() {
         )}
       </div>
 
-            <footer>
-                <p>&copy; 2024 UW Study Buddy App. All rights reserved.</p>
-            </footer>
+      <Footer /> {}
         </div>
     );
 }

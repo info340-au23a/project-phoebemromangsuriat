@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './Header'; 
 import Footer from './Footer';
-import studybuddylogo from './img/studybuddy-logo.png';
 import './css/style.css'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 

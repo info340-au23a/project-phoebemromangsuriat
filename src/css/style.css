@@ -381,13 +381,17 @@ button[type="goback"] {
     padding: 0;
     display: flex;
     justify-content: center;
+    color: purple;
 }
 
 .home-btns ul li {
     width: 300px; /* Adjust size as needed */
     height: auto; /* Adjust size as needed */
     margin-right: 10px;
+    color: purple;
 }
+
+
 
 .home-btns ul li a {
     text-decoration: none;
@@ -406,7 +410,7 @@ button[type="goback"] {
 
 .home-btns ul li a img {
     width: 50px;
-    height: 50px;
+    height: auto;
     margin-bottom: 5px;
 }
 

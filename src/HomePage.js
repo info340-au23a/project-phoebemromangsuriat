@@ -6,7 +6,7 @@ import studyBuddyLogo from './img/studybuddy-logo.png';
 function HomePage() {
   return (
     <div>
-    <Header /> 
+    <Header />
       <main>
         <h1>Welcome to UW Study Buddy</h1>
         <img src={studyBuddyLogo} alt="Study Buddy Logo" />
@@ -16,25 +16,25 @@ function HomePage() {
                 <ul>
                     <li>
                         <button onClick={() => this.navigateToPage('profile.html')}>
-                            <img src="profile_logo.png" alt="Profile Logo" />
+                            <img src={studyBuddyLogo} alt="Profile Logo" />
                             <span>Profile</span>
                         </button>
                     </li>
                     <li>
                         <button onClick={() => this.navigateToPage('shop.html')}>
-                            <img src="shop_logo.png" alt="Shop Logo" />
+                            <img src={studyBuddyLogo} alt="Shop Logo" />
                             <span>Shop</span>
                         </button>
                     </li>
                     <li>
                         <button onClick={() => this.navigateToPage('sell.html')}>
-                            <img src="sell_logo.png" alt="Sell Logo" />
+                            <img src={studyBuddyLogo} alt="Sell Logo" />
                             <span>Sell</span>
                         </button>
                     </li>
                     <li>
                         <button onClick={() => this.navigateToPage('friends.html')}>
-                            <img src="friends_logo.png" alt="Friends Logo" />
+                            <img src={studyBuddyLogo} alt="Friends Logo" />
                             <span>Friends</span>
                         </button>
                     </li>

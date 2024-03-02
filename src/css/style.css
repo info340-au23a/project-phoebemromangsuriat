@@ -421,3 +421,18 @@ button[type="goback"] {
     font-weight: bold;
 }
 
+.friends-container {
+    display: flex;
+    flex-direction: column;
+    
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: auto;
+    max-width: 700px;
+    min-height: auto;
+}
+
+.friends-form {
+    max-width: 600px; /* Adjust the max-width according to your design */
+    margin: 0 auto;
+}

@@ -11,7 +11,7 @@ function FriendItem({ friend }) {
         <p className="card-text">Major: {friend.major}</p>
         <p className="card-text">Grade: {friend.grade}</p>
         <p className="card-text">Bio: {friend.bio}</p>
-        <a href="#" className="btn btn-primary">
+        <a href="#" className="btn btn-primary purple-btn">
           View Profile
         </a>
       </div>

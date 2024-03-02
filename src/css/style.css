@@ -65,6 +65,11 @@ img {
     max-height: auto;
 }
 
+.purple-btn {
+    background-color: rgb(58, 4, 98);
+    border-color: rgb(58, 4, 98);
+    color: white;
+}
 
 @media (min-width: 850px) {
     .menu-bar ul {

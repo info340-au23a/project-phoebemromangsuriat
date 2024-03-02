@@ -15,8 +15,8 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 100px;
-    max-width: 100px;
+    max-width: 200px;
+    max-height: 200px;
 }
 
 @media (min-width: 768px) {
@@ -26,22 +26,27 @@ img {
 }
 
 .menu-bar {
-    font-family: 'Goergia', serif;
+    font-family: 'Georgia', serif;
     background-color: #383636;
     color: #fff;
     padding: 5px;
     text-align: center;
     letter-spacing: 2px;    
+    display: flex; /* Use flexbox */
+    align-items: center;
+    justify-content: center;
 }
 
 .menu-bar ul {
     margin: 0;
     padding: 10px;
     list-style-type: none;
+    display: flex; /* Use flexbox */
 }
 
 .menu-bar li {
-    display: inline;
+    display: inline-flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Align items vertically in the center */
     margin-right: 20px;
     word-spacing: 30px; 
 }
@@ -49,7 +54,16 @@ img {
 .menu-bar a {
     text-decoration: none;
     color: #fff;
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Align items vertically in the center */
 }
+
+.menu-bar a img {
+    margin-right: 5px;
+    max-width: 50px;
+    max-height: auto;
+}
+
 
 @media (min-width: 850px) {
     .menu-bar ul {
@@ -421,18 +435,4 @@ button[type="goback"] {
     font-weight: bold;
 }
 
-.friends-container {
-    display: flex;
-    flex-direction: column;
-    
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: auto;
-    max-width: 700px;
-    min-height: auto;
-}
 
-.friends-form {
-    max-width: 600px; /* Adjust the max-width according to your design */
-    margin: 0 auto;
-}

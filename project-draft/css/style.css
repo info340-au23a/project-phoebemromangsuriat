@@ -58,8 +58,6 @@ img {
     border-radius: 5px;
 }
 
-
-
 @media (min-width: 900px) {
     .menu-bar ul {
         margin: 0;
@@ -81,6 +79,7 @@ img {
 }
 
 h1, h4 {
+    margin-top: 0;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;

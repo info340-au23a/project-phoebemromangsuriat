@@ -20,11 +20,7 @@ img {
     max-height: 200px;
 }
 
-@media (min-width: 768px) {
-    img {
-        max-width: 40%; 
-    }
-}
+
 
 .menu-bar {
     font-family: 'Georgia', serif;
@@ -42,12 +38,12 @@ img {
     margin: 0;
     padding: 10px;
     list-style-type: none;
-    display: flex; /* Use flexbox */
+    display: flex; 
 }
 
 .menu-bar li {
-    display: inline-flex; /* Use flexbox to align items horizontally */
-    align-items: center; /* Align items vertically in the center */
+    display: inline-flex; 
+    align-items: center; 
     margin-right: 20px;
     word-spacing: 30px; 
 }
@@ -55,8 +51,8 @@ img {
 .menu-bar a {
     text-decoration: none;
     color: #fff;
-    display: flex; /* Use flexbox to align items horizontally */
-    align-items: center; /* Align items vertically in the center */
+    display: flex; 
+    align-items: center; 
 }
 
 .menu-bar a img {
@@ -255,9 +251,9 @@ button[type="goback"] {
     justify-content: center;
     background-color: white;
     padding: 20px;
-    margin: 20px auto; /* Add some margin for better visual appearance */
-    border-radius: 8px; /* Add rounded corners to the container */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+    margin: 20px auto; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 700px;
     padding: 100px
   }
@@ -270,9 +266,9 @@ button[type="goback"] {
     justify-content: center;
     background-color: white;
     padding: 20px;
-    margin: 20px auto; /* Add some margin for better visual appearance */
-    border-radius: 8px; /* Add rounded corners to the container */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+    margin: 20px auto; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     max-width: 700px;
     padding: 100px;
     color: rgba(42, 40, 40, 0.956)
@@ -285,9 +281,9 @@ button[type="goback"] {
 
 .listings-container {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
-    justify-content: space-around; /* Distribute items evenly along the main axis */
-    align-items: stretch; /* Stretch items to fill the cross-axis */
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    align-items: stretch; 
     background-color: #e5d8ff;
     padding: 20px;
     border-radius: 10px;
@@ -295,15 +291,15 @@ button[type="goback"] {
 }
 
 .textbook-listings {
-    flex: 1; /* Allow the items inside to grow and fill available space */
+    flex: 1; 
     display: flex;
     justify-content: space-around;
     align-items: stretch;
-    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    flex-wrap: wrap;
 }
 
 .textbook-item-container {
-    flex: 0 0 30%; /* Limit the individual item's width to 30% */
+    flex: 0 0 30%; 
     text-align: center;
     margin-bottom: 20px;
     padding: 20px;
@@ -313,8 +309,8 @@ button[type="goback"] {
 }
 
 .textbook-item-container img {
-    max-width: 100%; /* Ensure the image is responsive within its container */
-    max-height: 200px; /* Set a specific max-height for the image */
+    max-width: 100%; 
+    max-height: 200px; 
     border-radius: 8px;
     margin-bottom: 10px;
 }
@@ -337,9 +333,9 @@ button[type="goback"] {
   
 .listings-container {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
-    justify-content: space-around; /* Distribute items evenly along the main axis */
-    align-items: stretch; /* Stretch items to fill the cross-axis */
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    align-items: stretch; 
     background-color: #e5d8ff;
     padding: 20px;
     border-radius: 10px;
@@ -347,7 +343,7 @@ button[type="goback"] {
 }
 
 .textbook-listings {
-    flex: 1; /* Allow the items inside to grow and fill available space */
+    flex: 1; 
     display: flex;
     justify-content: space-around;
     align-items: stretch;
@@ -357,9 +353,9 @@ button[type="goback"] {
 
 .listings-container {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
-    justify-content: space-around; /* Distribute items evenly along the main axis */
-    align-items: stretch; /* Stretch items to fill the cross-axis */
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    align-items: stretch;
     background-color: #e5d8ff;
     padding: 20px;
     border-radius: 10px;
@@ -367,15 +363,15 @@ button[type="goback"] {
 }
 
 .textbook-listings {
-    flex: 1; /* Allow the items inside to grow and fill available space */
+    flex: 1; 
     display: flex;
     justify-content: space-around;
     align-items: stretch;
-    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    flex-wrap: wrap; 
 }
 
 .textbook-item-container {
-    flex: 0 0 30%; /* Limit the individual item's width to 30% */
+    flex: 0 0 30%; 
     text-align: center;
     margin-bottom: 20px;
     padding: 20px;
@@ -385,8 +381,8 @@ button[type="goback"] {
 }
 
 .textbook-item-container img {
-    max-width: 100%; /* Ensure the image is responsive within its container */
-    max-height: 200px; /* Set a specific max-height for the image */
+    max-width: 100%; 
+    max-height: 200px; 
     border-radius: 8px;
     margin-bottom: 10px;
 }
@@ -410,8 +406,8 @@ button[type="goback"] {
 }
 
 .home-btns ul li {
-    width: 300px; /* Adjust size as needed */
-    height: auto; /* Adjust size as needed */
+    width: 300px; 
+    height: auto; 
     margin-right: 10px;
     color: purple;
 }
@@ -452,6 +448,11 @@ button[type="goback"] {
 }
 
 .friends-form {
-    max-width: 600px; /* Adjust the max-width according to your design */
+    max-width: 600px; 
     margin: 0 auto;
 }
+
+#FindFriends h1 {
+    text-align: left;
+    margin-left: 20px; 
+  }

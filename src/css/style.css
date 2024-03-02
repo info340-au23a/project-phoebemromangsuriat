@@ -5,6 +5,10 @@ body {
     color: white;
     font-family: 'Georgia', serif;
     letter-spacing: 1px; 
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
  }
 
 img {
@@ -71,13 +75,6 @@ h4 {
     margin-top: 10px;
 }
 
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; 
-    margin: 0;
-  }
   
   main {
     flex: 1; 
@@ -88,7 +85,7 @@ body {
     color: #fff;
     text-align: center;
     padding: 10px;
-    position: absolute;
+
   }
   
 .listing-form {
@@ -387,8 +384,8 @@ button[type="goback"] {
 }
 
 .home-btns ul li {
-    width: 100px; /* Adjust size as needed */
-    height: 100px; /* Adjust size as needed */
+    width: 300px; /* Adjust size as needed */
+    height: auto; /* Adjust size as needed */
     margin-right: 10px;
 }
 
@@ -399,9 +396,8 @@ button[type="goback"] {
     align-items: center;
     justify-content: center;
     background-color: #f0f0f0;
-    border-radius: 10px;
+    border-radius: 20px;
     color: #333;
-    transition: background-color 0.3s ease;
 }
 
 .home-btns ul li a:hover {

@@ -3,7 +3,7 @@ body {
     margin: .5rem;
     background-color: #6433b9;
     color: white;
-    font-family: 'Goergia', serif;
+    font-family: 'Georgia', serif;
     letter-spacing: 1px; 
  }
 
@@ -11,8 +11,8 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 20%;
-    height: auto;
+    height: 100px;
+    max-width: 100px;
 }
 
 @media (min-width: 768px) {
@@ -88,6 +88,7 @@ body {
     color: #fff;
     text-align: center;
     padding: 10px;
+    margin-top: auto;
   }
   
 .listing-form {
@@ -376,4 +377,44 @@ button[type="goback"] {
 .textbook-item-container a {
     text-decoration: none;
     color: #383636;
+}
+
+.home-btns ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.home-btns ul li {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    margin-right: 10px;
+}
+
+.home-btns ul li a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.home-btns ul li a:hover {
+    background-color: #ccc;
+}
+
+.home-btns ul li a img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.home-btns ul li a span {
+    font-size: 14px;
+    font-weight: bold;
 }

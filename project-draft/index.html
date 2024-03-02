@@ -21,28 +21,57 @@
         </ul>
     </div>
 
-<main>
-    <h1>Welcome to UW Study Buddy </h1> 
-    <img src="img/studybuddy-logo.png" alt="Study Buddy Logo">
-    <h4>Unlock Your Learning Legacy: Connect, Sell, Succeed! </h2>
-</main>
+    <main>
+        <h1>Welcome to UW Study Buddy </h1> 
+        <img src="img/studybuddy-logo.png" alt="Study Buddy Logo">
+        <h4>Unlock Your Learning Legacy: Connect, Sell, Succeed! </h4>
+    </main>
 
-<footer>
-    <p>&copy; 2024 UW Study Buddy App. All rights reserved.</p>
-</footer>
+    <div class="home-btns">
+        <ul>
+            <li>
+                <a href="profile.html" id="profile-btn">
+                    <img src="profile_logo.png" alt="Profile Logo">
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="shop.html" id="shop-btn">
+                    <img src="shop_logo.png" alt="Shop Logo">
+                    <span>Shop</span>
+                </a>
+            </li>
+            <li>
+                <a href="sell.html" id="sell-btn">
+                    <img src="sell_logo.png" alt="Sell Logo">
+                    <span>Sell</span>
+                </a>
+            </li>
+            <li>
+                <a href="friends.html" id="friends-btn">
+                    <img src="friends_logo.png" alt="Friends Logo">
+                    <span>Friends</span>
+                </a>
+            </li>
+        </ul>
+    </div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var currentLocation = window.location.href;
-        var menuItems = document.querySelectorAll('.menu-bar a');
+    <footer>
+        <p>&copy; 2024 UW Study Buddy App. All rights reserved.</p>
+    </footer>
 
-        menuItems.forEach(function (item) {
-            if (item.href === currentLocation) {
-                item.classList.add('active');
-            }
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var currentLocation = window.location.href;
+            var menuItems = document.querySelectorAll('.menu-bar a');
+
+            menuItems.forEach(function (item) {
+                if (item.href === currentLocation) {
+                    item.classList.add('active');
+                }
+            });
         });
-    });
-</script>
+    </script>
 
 </body>
 

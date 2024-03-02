@@ -7,11 +7,14 @@ import profiles from './profileData';
 
 function FriendItem({ friend }) {
   return (
-    <div className="friend">
-      <h2>{friend.name}</h2>
-      <p>Major: {friend.major}</p>
-      <p>Grade: {friend.grade}</p>
-      <p>Bio: {friend.bio}</p>
+    <div className="card m-3" style={{ width: '18rem' }}>
+      <div className="card-body">
+        <h5 className="card-title">{friend.name}</h5>
+        <p className="card-text">Major: {friend.major}</p>
+        <p className="card-text">Grade: {friend.grade}</p>
+        <p className="card-text">Bio: {friend.bio}</p>
+        <a href="#" className="btn btn-primary">View Profile</a>
+      </div>
     </div>
   );
 }
@@ -107,3 +110,5 @@ function Friends() {
 }
 
 export default Friends;
+
+

@@ -85,7 +85,9 @@ h4 {
     color: #fff;
     text-align: center;
     padding: 10px;
-
+    bottom: 0;
+    position: fixed;
+    width: 100%;
   }
   
 .listing-form {
@@ -121,14 +123,15 @@ select {
 button {
     font-size: 16px;
     padding: 10px 20px;
-    background-color: #dcc21e;
+    background-color: #D0B9F9;
     color: #ffffff;
     border: none;
     border-radius: 5px;
 }
 
 button:hover {
-    background-color: #e7bf3c9c;
+    background-color: #D0B9F9;
+    opacity: 50%;
 }
 
 @media (min-width: 768px) {
@@ -302,12 +305,9 @@ button[type="goback"] {
 }
 
 #All-Listings{
-    h2{
         text-align: left;
         padding: 20px;
         color: white
-
-    }    
 }
 
   #Filter {
@@ -391,8 +391,6 @@ button[type="goback"] {
     color: purple;
 }
 
-
-
 .home-btns ul li a {
     text-decoration: none;
     display: flex;
@@ -418,3 +416,4 @@ button[type="goback"] {
     font-size: 14px;
     font-weight: bold;
 }
+

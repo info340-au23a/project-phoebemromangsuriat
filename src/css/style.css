@@ -31,10 +31,10 @@ img {
     color: #fff;
     padding: 5px;
     text-align: center;
-    letter-spacing: 2px;    
-    display: flex; /* Use flexbox */
+    letter-spacing: 2px;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
 }
 
 .menu-bar ul {
@@ -95,12 +95,12 @@ main {
 }
   
 footer {
+    bottom: 0;
+    width: 100%;
     background-color: #383636;
     color: #fff;
     text-align: center;
     padding: 10px;
-    bottom: 0;
-    width: 100%;
 }
   
 .listing-form {
